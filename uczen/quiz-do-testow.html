@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Quiz o stronach WWW</title>
+<style>:root{--accent:#087f92;--ink:#1f2933}*{box-sizing:border-box}body{margin:0;background:#f5f8f8;color:var(--ink);font:18px/1.5 system-ui,sans-serif}main{max-width:760px;margin:5vh auto;padding:36px;background:#fff;border:1px solid #d5dfe2;border-radius:18px}h1{font-size:clamp(27px,5vw,40px);line-height:1.15;margin:0 0 18px}h2{font-size:25px;line-height:1.3}p{margin:14px 0}.label{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);font-weight:700}.muted{color:#58666d}button{font:inherit;cursor:pointer;border-radius:8px;padding:13px 18px;border:1px solid #acbdc5;color:var(--ink);background:#fff}button:hover:not(:disabled){background:#edf8fa}button:focus-visible{outline:3px solid #c47f12;outline-offset:3px}button:disabled{cursor:default;opacity:.7}.primary{background:var(--accent);color:#fff;border-color:var(--accent)}.primary:hover:not(:disabled){background:#066a79}.answers{display:grid;gap:12px;margin:24px 0}.answers button{text-align:left;width:100%}.answers button.selected{border:2px solid var(--accent);background:#e5f4f6}.status{display:flex;justify-content:space-between;gap:16px;font-size:16px;color:#526068;padding-bottom:16px;border-bottom:1px solid #d5dfe2}.feedback{min-height:55px;margin:20px 0}.score{font-size:56px;font-weight:800;color:var(--accent);margin:20px 0}footer{margin-top:32px;font-size:14px;color:#526068} [hidden]{display:none!important}@media(max-width:600px){main{margin:12px;padding:24px 18px}.status{font-size:14px}h2{font-size:22px}}</style></head>
+<body><main><p class="label">IT wspierane AI</p><h1>Quiz o stronach WWW</h1>
+<section id="intro"><p>Pięć pytań o HTML, CSS i JavaScript.</p><p>Wybierz jedną odpowiedź. Za każde pytanie możesz zdobyć jeden punkt. Po odpowiedzi zobaczysz wyjaśnienie.</p><button id="start" class="primary">Rozpocznij quiz</button></section>
+<section id="quiz" hidden><div class="status"><span id="progress"></span><span id="score" aria-live="polite"></span></div><h2 id="question" tabindex="-1"></h2><div id="answers" class="answers"></div><div id="feedback" class="feedback" role="status"></div><button id="next" class="primary" hidden>Dalej</button></section>
+<section id="result" hidden><h2 tabindex="-1" id="endTitle">Twój wynik</h2><p id="finalScore" class="score"></p><p>Porównaj odpowiedzi z notatką. Co warto jeszcze powtórzyć?</p><button id="restart" class="primary">Zacznij od nowa</button></section>
+<footer>Podstawy stron WWW · Materiał warsztatowy</footer></main>
+<script>
+const questions=[
+  {
+    "q": "Co opisuje HTML?",
+    "a": [
+      "Strukturę i treść strony",
+      "Wyłącznie wygląd strony",
+      "Wyłącznie reakcję na kliknięcie"
+    ],
+    "correct": 0,
+    "why": "HTML opisuje strukturę i treść strony, np. nagłówki oraz akapity."
+  },
+  {
+    "q": "Za co odpowiada CSS?",
+    "a": [
+      "Za strukturę dokumentu",
+      "Za wygląd strony",
+      "Za naliczanie punktów po kliknięciu"
+    ],
+    "correct": 2,
+    "why": "CSS określa wygląd: kolory, rozmiary, odstępy i układ."
+  },
+  {
+    "q": "Czego użyjemy do aktualizacji wyniku po kliknięciu?",
+    "a": [
+      "Wyłącznie elementu title",
+      "Wyłącznie CSS",
+      "JavaScript"
+    ],
+    "correct": 2,
+    "why": "JavaScript pozwala reagować na kliknięcia i zmieniać wynik quizu."
+  },
+  {
+    "q": "Który element zawiera treść strony pokazywaną użytkownikowi?",
+    "a": [
+      "title",
+      "body",
+      "meta charset"
+    ],
+    "correct": 1,
+    "why": "Element body zawiera treść strony pokazywaną użytkownikowi."
+  },
+  {
+    "q": "Co określa element title?",
+    "a": [
+      "Tytuł dokumentu widoczny zwykle na karcie przeglądarki",
+      "Liczbę punktów za odpowiedź",
+      "Kolor wszystkich przycisków"
+    ],
+    "correct": 0,
+    "why": "Element title określa tytuł dokumentu, zwykle widoczny na karcie przeglądarki."
+  }
+];
+let index=0, score=0, answered=false;
+const $=id=>document.getElementById(id);
+function updateScore(){$('score').textContent='Wynik: '+score+' / '+questions.length;}
+function showQuestion(){answered=false;$('feedback').textContent='';$('next').hidden=true;const q=questions[index];$('progress').textContent='Pytanie '+(index+1)+' z '+questions.length;updateScore();$('question').textContent=q.q;$('answers').replaceChildren();q.a.forEach((label,i)=>{const b=document.createElement('button');b.type='button';b.textContent=String.fromCharCode(65+i)+'. '+label;b.addEventListener('click',()=>answer(i,b));$('answers').append(b);});$('question').focus();}
+function answer(choice,button){answered=true;const q=questions[index];const correct=choice===q.correct;if(correct)score++;button.classList.add('selected');$('feedback').textContent=(correct?'Poprawnie. ':'Nie tym razem. ')+q.why;updateScore();$('next').textContent=index===questions.length-1?'Pokaż wynik':'Dalej';$('next').hidden=false;}
+function start(){index=0;$('intro').hidden=true;$('result').hidden=true;$('quiz').hidden=false;showQuestion();}
+$('start').addEventListener('click',start);$('restart').addEventListener('click',start);
+$('next').addEventListener('click',()=>{if(!answered)return;index++;if(index<questions.length)showQuestion();else{$('quiz').hidden=true;$('result').hidden=false;$('finalScore').textContent=score+' / '+questions.length;$('endTitle').focus();}});
+</script></body></html>

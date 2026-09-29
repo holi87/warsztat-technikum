@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl" xml:lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc 3.11" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Karta pracy — IT wspierane AI</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+  </style>
+  <style>html{scroll-behavior:smooth}body{max-width:980px;margin:48px auto;padding:0 28px;color:#1f2933;hyphens:none;font:17px/1.65 system-ui,sans-serif}h1,h2,h3{line-height:1.2;color:#173b44}h1{font-size:40px}h2{font-size:28px;margin-top:54px;border-top:1px solid #cad9df;padding-top:24px}h3{font-size:22px;margin-top:32px}a{color:#087c90}pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:22px;background:#edf6f7;border-left:4px solid #0f8fa3;font:15px/1.55 ui-monospace,monospace}code{overflow-wrap:anywhere}table{border-collapse:collapse;width:100%;font-size:15px;display:block;overflow-x:auto}th,td{padding:10px 12px;border:1px solid #d1dce1;text-align:left;vertical-align:top}th{background:#edf6f7}li{margin:8px 0}nav{background:#f4f8f9;padding:16px 26px}footer{margin:48px 0;color:#566}@media(max-width:600px){body{margin:24px auto;padding:0 18px;font-size:16px}h1{font-size:30px}pre{font-size:13px;padding:16px}}@media print{body{max-width:none;margin:0;padding:0;font-size:10pt;line-height:1.4}h1{font-size:24pt}h2{font-size:17pt;margin-top:24pt}h3{font-size:13pt}pre{font-size:9pt}table{display:table;font-size:9pt}h1,h2,h3{break-after:avoid}pre,tr{break-inside:avoid}a{color:inherit}nav{display:none}@page{size:A4;margin:18mm}}</style>
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#it-wspierane-ai--karta-pracy"
+id="toc-it-wspierane-ai--karta-pracy">IT wspierane AI — karta pracy</a>
+<ul>
+<li><a href="#1-bezpieczna-decyzja--10-minut"
+id="toc-1-bezpieczna-decyzja--10-minut">1. Bezpieczna decyzja — 10
+minut</a></li>
+<li><a href="#2-własny-prompt--15-minut"
+id="toc-2-własny-prompt--15-minut">2. Własny prompt — 15 minut</a></li>
+<li><a href="#3-plan-quizu--10-minut" id="toc-3-plan-quizu--10-minut">3.
+Plan quizu — 10 minut</a></li>
+<li><a href="#przerwa--10-minut" id="toc-przerwa--10-minut">Przerwa — 10
+minut</a></li>
+<li><a href="#4-własny-quiz--30-minut"
+id="toc-4-własny-quiz--30-minut">4. Własny quiz — 30 minut</a></li>
+<li><a href="#5-treść-i-działanie--5-minut"
+id="toc-5-treść-i-działanie--5-minut">5. Treść i działanie — 5
+minut</a></li>
+<li><a href="#6-polowanie-na-bugi--15-minut"
+id="toc-6-polowanie-na-bugi--15-minut">6. Polowanie na bugi — 15
+minut</a></li>
+<li><a href="#7-naprawa-i-retest--10-minut"
+id="toc-7-naprawa-i-retest--10-minut">7. Naprawa i retest — 10
+minut</a></li>
+<li><a href="#na-koniec" id="toc-na-koniec">Na koniec</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="it-wspierane-ai--karta-pracy">IT wspierane AI — karta pracy</h1>
+<p>Pracujesz w ChatGPT, Claude albo innym zatwierdzonym czacie AI.
+Prompty nie wymagają konkretnej marki ani płatnej funkcji. Jeśli
+narzędzie ma podgląd aplikacji, możesz z niego skorzystać. Końcowy plik
+zapisz jako HTML, żeby móc do niego wrócić poza czatem.</p>
+<p>Twój cel: mały quiz, jedna własna zmiana, trzy testy i sprawdzenie
+jednej poprawki. Odpowiedzi zapisuj w swoim dokumencie tekstowym. Ta
+karta jest instrukcją, nie formularzem zapisującym Twoją pracę.</p>
+<h2 id="1-bezpieczna-decyzja--10-minut">1. Bezpieczna decyzja — 10
+minut</h2>
+<p>Wszystkie poniższe sytuacje są fikcyjne. Nie używaj prawdziwych
+danych, nie otwieraj podejrzanych linków i niczego nie instaluj.</p>
+<p><strong>A. Dane w prompcie</strong></p>
+<p>Kolega proponuje: „Wklejmy do AI imię, nazwisko, numer telefonu i
+oceny ucznia, żeby przygotowała mu quiz do poprawy sprawdzianu”. Czy te
+dane są potrzebne do zadania?</p>
+<p><strong>B. Pilna wiadomość</strong></p>
+<p>Z konta znajomego przychodzi: „Potrzebuję natychmiast kodu BLIK,
+oddam za godzinę. Nie dzwoń, nie mogę rozmawiać”. Co zrobisz przed
+odpowiedzią?</p>
+<p><strong>C. Dodatkowa instalacja</strong></p>
+<p>Na stronie z poradą widzisz: „Żeby uruchomić quiz z AI, pobierz nasz
+dodatek z tego linku i przyznaj mu dostęp do wszystkich stron”. Czy
+zainstalujesz dodatek?</p>
+<p>Dla każdej sytuacji zapisz: <strong>ryzyko, decyzję i bezpieczny
+następny krok</strong>. Jeśli skończysz wcześniej, przepisz prompt z
+sytuacji A, usuwając zbędne dane.</p>
+<h2 id="2-własny-prompt--15-minut">2. Własny prompt — 15 minut</h2>
+<p>Otwórz <code>notatka-zrodlowa.txt</code>. Wklej notatkę do rozmowy
+razem z poniższą instrukcją. Tekst w nawiasach kwadratowych zastąp
+własną treścią.</p>
+<h3 id="p1--pytania-do-quizu">P1 — pytania do quizu</h3>
+<pre class="text"><code>Przygotuj quiz do nauki dla osoby początkującej w tworzeniu stron WWW.
+Użyj wyłącznie informacji z notatki poniżej.
+
+Wymagania:
+- 5 pytań, po 3 odpowiedzi: A, B, C.
+- Dokładnie jedna poprawna odpowiedź na każde pytanie.
+- Prosty język i krótkie wyjaśnienie poprawnej odpowiedzi.
+- Nie dodawaj wiedzy, której nie ma w notatce.
+
+Zwróć tabelę: pytanie, A, B, C, poprawna odpowiedź, wyjaśnienie.
+Na tym etapie nie pisz kodu aplikacji.
+Jeśli brakuje informacji potrzebnej do wykonania zadania, wskaż brak.
+
+NOTATKA:
+[wklej treść pliku notatka-zrodlowa.txt]</code></pre>
+<p>Sprawdź liczbę pytań, jednoznaczność odpowiedzi i zgodność ze
+źródłem. Potem doprecyzuj co najmniej jedną rzecz. Możesz użyć
+wzoru:</p>
+<pre class="text"><code>W pytaniu [numer] zauważyłem [konkretny problem].
+Popraw [dokładny zakres zmiany]. Pozostałe pytania zachowaj.
+Ponownie podaj poprawną odpowiedź i krótkie wyjaśnienie.</code></pre>
+<p>Jeśli nie widzisz błędu, doprecyzuj język albo format. Zapisz
+pierwszy prompt, poprawiony prompt i jedną zauważoną różnicę.</p>
+<p><strong>Bez dostępu do AI:</strong> przeanalizuj przygotowany
+przykład. To celowo niedoskonała próbka do oceny, nie zapis działania
+konkretnego narzędzia:</p>
+<table>
+<thead>
+<tr>
+<th>Pytanie</th>
+<th>Odpowiedzi</th>
+<th>Wskazany klucz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Co opisuje HTML?</td>
+<td>A: strukturę i treść; B: wyłącznie kolory; C: hasło do strony</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Za co odpowiada CSS?</td>
+<td>A: wygląd strony; B: zasilanie komputera; C: numer telefonu</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Co może robić JavaScript?</td>
+<td>A: reagować na kliknięcie; B: aktualizować wynik; C: obie te
+czynności</td>
+<td>C</td>
+</tr>
+<tr>
+<td>W którym roku powstał JavaScript?</td>
+<td>A: 1995; B: 2005; C: 2015</td>
+<td>A</td>
+</tr>
+<tr>
+<td>Do czego służy element body?</td>
+<td>A: do treści strony; B: do hasła; C: do numeru telefonu</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<p>Wskaż pytanie, którego odpowiedzi nie da się potwierdzić w notatce.
+Sprawdź też, czy odpowiedzi są dobrze skonstruowane i czy dodano
+wymagane wyjaśnienia. Napisz prompt poprawiający wynik i sam zaproponuj
+jedną poprawkę.</p>
+<h2 id="3-plan-quizu--10-minut">3. Plan quizu — 10 minut</h2>
+<p>Najpierw sam opisz przebieg: start, pytanie, wybór odpowiedzi,
+wyjaśnienie, kolejne pytanie, wynik. Wybierz 3–5 konkretnych wymagań,
+które potrafisz sprawdzić.</p>
+<p>Przykład: „Restart zeruje wynik i pokazuje pierwsze pytanie”.</p>
+<h3 id="p2--pomoc-w-planowaniu">P2 — pomoc w planowaniu</h3>
+<pre class="text"><code>Planuję prosty quiz w jednym lokalnym pliku HTML.
+To mój przebieg działania i wymagania:
+[wklej swój plan]
+
+Wskaż niejasności i brakujące decyzje. Nie pisz jeszcze kodu.
+Rozdziel opis na: ekran użytkownika, dane pytań, zasady punktacji.
+Uwzględnij, że jeden wybór kończy odpowiadanie na dane pytanie,
+a restart zeruje wynik i wraca do początku.
+Nie dodawaj logowania, serwera ani nowych funkcji bez pytania.</code></pre>
+<p>Przeczytaj uwagi AI. Zapisz <strong>swój zatwierdzony plan</strong>.
+Możesz odrzucić sugestię, jeśli potrafisz wyjaśnić dlaczego. Bez AI omów
+plan z drugą osobą.</p>
+<h2 id="przerwa--10-minut">Przerwa — 10 minut</h2>
+<p>Zapisz dotychczasową pracę. Po powrocie budujemy aplikację.</p>
+<h2 id="4-własny-quiz--30-minut">4. Własny quiz — 30 minut</h2>
+<h3 id="p3--budowa-aplikacji">P3 — budowa aplikacji</h3>
+<pre class="text"><code>Zbuduj quiz do nauki na podstawie zatwierdzonych pytań i planu poniżej.
+Zwróć kompletny kod jednego pliku HTML z CSS i JavaScript w środku.
+Plik ma działać lokalnie w przeglądarce, bez serwera, internetu,
+zewnętrznych bibliotek, logowania i zbierania danych użytkownika.
+
+Wymagania:
+- 5 pytań, po 3 odpowiedzi, dokładnie jedna poprawna.
+- Jedno pytanie widoczne naraz.
+- Po pierwszym wyborze zablokuj zmianę odpowiedzi w tym pytaniu.
+- Poprawna odpowiedź daje 1 punkt, błędna 0.
+- Każde pytanie może dodać najwyżej 1 punkt. Wynik: 0–5.
+- Pokaż krótkie wyjaśnienie po odpowiedzi.
+- Przycisk „Dalej” jest dostępny po udzieleniu odpowiedzi.
+- Na końcu pokaż wynik i przycisk „Zacznij od nowa”.
+- Restart zeruje wynik i pokazuje pierwsze pytanie.
+- Polski interfejs, czytelne przyciski i obsługa klawiaturą.
+
+Nie zmieniaj znaczenia zatwierdzonych pytań ani klucza odpowiedzi.
+
+PYTANIA Z KLUCZEM:
+[wklej sprawdzone pytania, odpowiedzi i wyjaśnienia]
+
+PLAN:
+[wklej swój zatwierdzony plan]</code></pre>
+<h3 id="zapisanie-i-uruchomienie">Zapisanie i uruchomienie</h3>
+<ol type="1">
+<li>Jeśli czat udostępni plik HTML, pobierz go. Jeśli poda kod, skopiuj
+sam kod, bez otaczających znaczników bloku.</li>
+<li>Wklej kod do zwykłego edytora tekstu lub edytora kodu. Zapisz jako
+<code>quiz.html</code>, kodowanie UTF-8. Nie używaj Worda.</li>
+<li>Sprawdź, czy plik nie nazywa się <code>quiz.html.txt</code>. W
+Windows podczas zapisu może być potrzebny typ „Wszystkie pliki”. W macOS
+edytor musi zapisywać zwykły tekst, nie RTF.</li>
+<li>Otwórz plik w przeglądarce. Po zmianach zapisz plik i odśwież
+stronę.</li>
+</ol>
+<p>Korzystaj ze sposobu uruchamiania zatwierdzonego przez prowadzących.
+Jeśli pojawi się prośba o instalację, dodatkowe uprawnienia lub
+połączenie z inną usługą, zatrzymaj się i poproś o pomoc.</p>
+<p><strong>Twoja zmiana:</strong> zmień tytuł, kolor albo sposób
+wyjaśniania odpowiedzi. Napisz konkretnie, co chcesz zmienić i co ma
+pozostać bez zmian. Zapisz, jak sprawdzisz efekt.</p>
+<p><strong>Jeśli utkniesz:</strong> użyj <code>quiz-start.html</code>.
+Jest działającym punktem wyjścia. Możesz poprosić AI o jedną zmianę w
+jego kodzie. Bez AI otwórz go w edytorze i zmień tytuł w elemencie
+<code>h1</code> albo kolor <code>--accent</code> w CSS. Zapisz kopię
+jako <code>quiz.html</code>, odśwież i porównaj.</p>
+<p><strong>Dla chętnych:</strong> dodaj losowanie pytań. Sprawdź, czy
+nadal pojawia się każde pytanie dokładnie raz. Nie dodawaj kilku funkcji
+naraz.</p>
+<h2 id="5-treść-i-działanie--5-minut">5. Treść i działanie — 5
+minut</h2>
+<p>Wybierz jedno pytanie w swoim quizie. Porównaj odpowiedź z notatką i
+zapisz zdanie, które ją potwierdza. Następnie <strong>bez AI</strong>
+wymyśl trzy testy działania aplikacji.</p>
+<p>Dla każdego testu zapisz, co zrobisz i jakiego efektu oczekujesz. Nie
+wystarcza „sprawdzę restart”. Napisz: „Po zdobyciu punktu kończę quiz,
+uruchamiam go od nowa i oczekuję wyniku 0 oraz pierwszego pytania”.</p>
+<h2 id="6-polowanie-na-bugi--15-minut">6. Polowanie na bugi — 15
+minut</h2>
+<p>Wykonaj trzy testy: wielokrotne kliknięcie odpowiedzi, punktacja,
+restart. Użyj własnego quizu albo zamień się z sąsiadem. Jeśli nie
+znajdujesz błędu, otwórz <code>quiz-do-testow.html</code>. To celowo
+niedoskonały materiał ćwiczeniowy.</p>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Kroki</th>
+<th>Wynik oczekiwany</th>
+<th>Wynik rzeczywisty</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Wielokrotny klik</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Punktacja</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Restart</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Możesz skopiować tabelę do dokumentu albo użyć
+<code>karta-testow.tsv</code>. Status: <strong>zgodny, błąd lub nie
+sprawdzono</strong>. Zapisuj fakty, również wtedy, gdy aplikacja działa
+poprawnie.</p>
+<h3 id="p4--dodatkowy-pomysł-na-test">P4 — dodatkowy pomysł na test</h3>
+<pre class="text"><code>Testuję quiz o takich wymaganiach:
+[wklej wymagania]
+
+Wykonałem już te testy:
+[wklej kroki i rzeczywiste wyniki]
+
+Zaproponuj 3 dodatkowe testy z krokami i oczekiwanym wynikiem.
+Oddziel sprawdzanie wymagań od propozycji nowych funkcji.
+Nie opisuj proponowanych testów jako wykonanych.
+Nie deklaruj istnienia błędu bez potwierdzenia.</code></pre>
+<p>Wybierz jeden pomysł, oceń jego sens i wykonaj test. Opisz jeden
+<strong>potwierdzony</strong> błąd: tytuł, kroki, wynik oczekiwany,
+rzeczywisty i ewentualny zrzut. Bez AI wymień się dodatkowym pomysłem z
+sąsiadem.</p>
+<h2 id="7-naprawa-i-retest--10-minut">7. Naprawa i retest — 10
+minut</h2>
+<h3 id="p5--poprawa-jednego-błędu">P5 — poprawa jednego błędu</h3>
+<pre class="text"><code>Napraw jeden potwierdzony błąd w załączonym kodzie quizu.
+
+Kroki odtworzenia:
+[dokładne kroki od świeżego otwarcia strony]
+Wynik oczekiwany:
+[co powinno się wydarzyć]
+Wynik rzeczywisty:
+[co zaobserwowałeś]
+
+Nie dodawaj nowych funkcji ani nie zmieniaj pytań, klucza i wyglądu,
+jeżeli nie jest to konieczne do naprawienia zgłoszonego błędu.
+Krótko wyjaśnij zmianę i zwróć kompletny poprawiony plik HTML.
+Zaproponuj test naprawy i jeden test wcześniej działającej funkcji.
+Nie twierdź, że testy wykonano, jeśli ich nie uruchomiłeś.
+
+KOD:
+[wklej kod pliku]</code></pre>
+<p>Zapisz nową wersję jako <code>quiz-v2.html</code>. Otwórz ją w nowej
+karcie. Powtórz kroki błędu i jeszcze jeden wcześniejszy test. Zapisz
+wynik <strong>przed zmianą i po zmianie</strong>.</p>
+<p>Jeśli poprawka nie działa, zaznacz to i doprecyzuj zgłoszenie. Nie
+ukrywaj niepowodzenia. Bez AI poproś prowadzącego o poprawny quiz i
+sprawdź go tymi samymi testami. Jest to weryfikacja przygotowanej
+poprawki.</p>
+<h2 id="na-koniec">Na koniec</h2>
+<p>Zachowaj prompt, plik HTML i wyniki testów. Zapisz po jednym
+zdaniu:</p>
+<ul>
+<li>Stworzyłem / zmieniłem…</li>
+<li>Samodzielnie sprawdziłem…</li>
+<li>AI pomyliła się w… / jeszcze nie potwierdziłem…</li>
+</ul>
+<p>Nie publikujemy projektu w trakcie tego warsztatu. Możesz wrócić do
+niego później i do każdej nowej funkcji dopisać test.</p>
+</body>
+</html>
