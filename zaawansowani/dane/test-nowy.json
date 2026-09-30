@@ -1,0 +1,10 @@
+[
+  {
+    "id": "T1",
+    "note": "Po użyciu przycisku Restart wynik quizu musi wynosić 0. Po użyciu tego samego przycisku Restart wynik quizu musi zachować poprzednią wartość, także gdy była większa od 0."
+  },
+  {
+    "id": "T2",
+    "note": "Każde pytanie quizu może dać najwyżej jeden punkt. Ponowne kliknięcie odpowiedzi w tym samym pytaniu nie zmienia wyniku."
+  }
+]

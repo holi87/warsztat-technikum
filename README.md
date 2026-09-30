@@ -4,16 +4,23 @@ Materiały ucznia do 3-godzinnego warsztatu prowadzonego przez Konrada i Grzegor
 
 Możesz pracować w Claude, ChatGPT lub innym czacie AI wskazanym przez prowadzących. Prompty są uniwersalne. Nie musisz znać programowania.
 
+## Wybierz poziom
+
+- **[Grupa zaawansowana — karta pracy](zaawansowani/karta-pracy.md):** prompt engineering, meta prompting, brainstorming, nauka i prototypowanie z AI, skills oraz agenci. 180 minut wraz z wyjaśnieniami i przerwą. Po pobraniu ZIP otwórz `zaawansowani/karta-pracy.html`.
+- **[Grupa podstawowa — karta pracy](uczen/karta-pracy.md):** podstawy bezpiecznej pracy z AI, pierwszy quiz i testowanie. Po pobraniu ZIP otwórz `uczen/karta-pracy.html`.
+
+Obie wersje działają z różnymi czatami AI; nie wymagają płatnego API ani Gita. Wariant zaawansowany zawiera dane do eksperymentów, prompty, szablon dziennika, SKILL.md i kontrakt agenta. Natywne narzędzia agenta są opcjonalne; podstawowy wariant to jawna symulacja z człowiekiem obsługującym przeglądarkę.
+
 ## Pobierz materiały i zacznij
 
 1. **[Pobierz wszystkie materiały jako ZIP](https://github.com/holi87/warsztat-technikum/archive/refs/heads/main.zip)**. Możesz też wybrać zielony przycisk **Code → Download ZIP** na stronie repozytorium.
 2. Rozpakuj archiwum na komputerze.
-3. Wejdź do folderu **uczen** i otwórz **karta-pracy.html** w przeglądarce.
+3. Wejdź do folderu wybranego poziomu: **uczen** (podstawowy) albo **zaawansowani**. Otwórz **karta-pracy.html** w przeglądarce.
 4. Wykonuj zadania zgodnie z instrukcjami prowadzących. Swoje odpowiedzi, prompty i wyniki testów zapisuj w osobnym dokumencie.
 
 Nie trzeba instalować Gita, pobierać dodatkowych bibliotek ani uruchamiać serwera. Pliki HTML otwierasz po rozpakowaniu, bezpośrednio z komputera. Na stronie GitHuba plik HTML może być widoczny jako kod — do pracy pobierz go razem z resztą materiałów.
 
-## Co jest w folderze ucznia?
+## Co jest w folderze podstawowym `uczen`?
 
 | Plik | Do czego służy? |
 |---|---|

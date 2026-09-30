@@ -1,0 +1,24 @@
+PODSTAWY STRON WWW — NOTATKA DO QUIZU
+
+HTML opisuje strukturę i treść strony internetowej. Elementy HTML mogą oznaczać na przykład nagłówki, akapity, obrazy i odnośniki.
+
+CSS określa wygląd strony, na przykład kolory, rozmiary tekstu, odstępy i układ elementów.
+
+JavaScript pozwala dodawać interaktywne zachowania, na przykład reagować na kliknięcie odpowiedzi i aktualizować wynik quizu.
+
+Element <body> zawiera treść strony pokazywaną użytkownikowi. Element <title> określa tytuł dokumentu, który zwykle widać na karcie przeglądarki.
+
+Prosty plik HTML można zapisać na komputerze i otworzyć w przeglądarce. W naszym ćwiczeniu kod CSS i JavaScript znajduje się w tym samym pliku. Przygotowane quizy nie potrzebują logowania ani połączenia z internetem. Dostęp do internetowego czatu AI jest osobną sprawą.
+
+ZASADY NASZEGO QUIZU
+Pięć pytań. Trzy odpowiedzi na pytanie. Dokładnie jedna poprawna odpowiedź. Za jedno pytanie można zdobyć najwyżej jeden punkt. Błędna odpowiedź daje zero punktów. Wynik mieści się w zakresie 0–5. Po odpowiedzi pojawia się wyjaśnienie. Przycisk restartu zeruje wynik i wraca do pierwszego pytania.
+
+ŹRÓDŁA DO WERYFIKACJI WIEDZY
+MDN — HTML: Creating the content
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Creating_the_content
+MDN — CSS: Styling the content
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Styling_the_content
+MDN — JavaScript: Adding interactivity
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started/Your_first_website/Adding_interactivity
+
+Notatka jest autorskim uproszczeniem na potrzeby warsztatu. Zasady quizu są wymaganiami ćwiczenia, a nie zasadami działania wszystkich aplikacji.

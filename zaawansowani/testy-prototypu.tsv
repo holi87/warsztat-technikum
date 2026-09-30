@@ -1,0 +1,7 @@
+ID	Kroki	Oczekiwanie	Obserwacja	Status_PASS_FAIL_NIEBADANE
+R1	Nowa strona; odpowiedz poprawnie na 5 pytań	Wynik 5/5		NIEBADANE
+R2	Nowa strona; odpowiedz błędnie na 5 pytań	Wynik 0/5		NIEBADANE
+R3	Nowa strona; kliknij poprawną odpowiedź w pytaniu 1 wielokrotnie	Tylko 1 punkt; kolejne kliknięcia nie zmieniają wyniku		NIEBADANE
+R4	Zakończ quiz z niezerowym wynikiem; Restart	Wynik 0; pierwsze pytanie; stan odpowiedzi wyzerowany		NIEBADANE
+R5	Przejdź przyciskami Tab i Enter; ustaw szerokość okna około 390 px	Przyciski dostępne; treść czytelna; brak obciętych odpowiedzi		NIEBADANE
+F1	Wpisz kroki dla własnej funkcji	Wpisz kryterium z ćwiczenia 3		NIEBADANE
