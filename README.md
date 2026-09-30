@@ -11,6 +11,11 @@ Możesz pracować w Claude, ChatGPT lub innym czacie AI wskazanym przez prowadz�
 
 Obie prezentacje znajdują się w głównym katalogu repozytorium i są również dostępne w archiwum ZIP ze wszystkimi materiałami.
 
+## Linki informacyjne
+
+- [quality-blog.eu](https://quality-blog.eu/) — trochę wiedzy o AI.
+- [holak.net.pl/pl/blog](https://holak.net.pl/pl/blog/) — frameworki promptowe.
+
 ## Wybierz poziom
 
 - **[Grupa zaawansowana — karta pracy](zaawansowani/karta-pracy.md):** prompt engineering, meta prompting, brainstorming, nauka i prototypowanie z AI, skills oraz agenci. 180 minut wraz z wyjaśnieniami i przerwą. Po pobraniu ZIP otwórz `zaawansowani/karta-pracy.html`.
