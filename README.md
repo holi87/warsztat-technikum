@@ -4,6 +4,13 @@ Materiały ucznia do 3-godzinnego warsztatu prowadzonego przez Konrada i Grzegor
 
 Możesz pracować w Claude, ChatGPT lub innym czacie AI wskazanym przez prowadzących. Prompty są uniwersalne. Nie musisz znać programowania.
 
+## Prezentacje do pobrania
+
+- **[Wykład: AI — prompty, skills i agenci (PPTX)](https://github.com/holi87/warsztat-technikum/raw/refs/heads/main/AI-prompty-skills-agenci-WYKLAD.pptx)**
+- **[IT wspierane AI — warsztat 180 minut (PPTX)](https://github.com/holi87/warsztat-technikum/raw/refs/heads/main/IT-wspierane-AI-warsztat-180-min.pptx)**
+
+Obie prezentacje znajdują się w głównym katalogu repozytorium i są również dostępne w archiwum ZIP ze wszystkimi materiałami.
+
 ## Wybierz poziom
 
 - **[Grupa zaawansowana — karta pracy](zaawansowani/karta-pracy.md):** prompt engineering, meta prompting, brainstorming, nauka i prototypowanie z AI, skills oraz agenci. 180 minut wraz z wyjaśnieniami i przerwą. Po pobraniu ZIP otwórz `zaawansowani/karta-pracy.html`.
